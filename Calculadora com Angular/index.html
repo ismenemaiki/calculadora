@@ -1,0 +1,39 @@
+<html ng-app="Calculadora">
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora com Angular</title>
+    <style>
+            .jumbotron{
+                width: 300px;
+                text-align: center;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .form-control{
+                margin-bottom: 10px;
+            }
+        </style>
+    <script src="angular.js"></script>
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  
+</head>
+    
+<body ng-controller="Controller-calculadora">
+    <center>
+        <div class="jumbotron">
+            <h4>{{titulo}}</h4>
+            
+    <input id="box1" class="form-control" type="text" ng-model="n1"/><br>
+    <input id="box2" class="form-control" type="text" ng-model="n2"/><br>
+    {{fras}}<br>
+    <input class="radio"type="radio" id="rAdicao" name="radio"> Adição</input>
+    <input class="radio" type="radio" id="rSubtracao" name="radio">Subtração</input><br>
+
+    <button id="botaoCalcular" class="btn btn-primary" ng-click="calcular()">Calcular</button><br>
+    <div id="resultado">{{resultadoTela}}</div>
+</div>
+</center>
+</body>
+</html>

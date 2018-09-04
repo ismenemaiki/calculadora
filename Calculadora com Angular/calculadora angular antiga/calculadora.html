@@ -1,0 +1,41 @@
+<html ng-app="Calculadora">
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora com Angular</title>
+    <style>
+            .jumbotron{
+                width: 300px;
+                text-align: center;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .form-control{
+                margin-bottom: 10px;
+            }
+        </style>
+    <script src="angular.js"></script>
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  
+</head>
+    
+<body ng-controller="Controller">
+    <center>
+            <div class="jumbotron">
+                <h4>{{titulo}}</h4>
+            
+    <input class="form-control" type="text" ng-model="n1"/><br>
+    <input class="form-control" type="text" ng-model="n2"/><br>
+    {{frase}}<br>
+    <button class="btn btn-primary" ng-click="soma()">+</button>
+    <button class="btn btn-primary" ng-click="subtracao()">-</button>
+    <button class="btn btn-primary" ng-click="divisao()">÷</button>
+    <button class="btn btn-primary" ng-click="multiplicacao()">x</button><br><br>
+    {{resultadoTela}}
+
+    
+</div>
+</center>
+</body>
+</html>
